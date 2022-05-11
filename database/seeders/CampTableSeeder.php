@@ -24,7 +24,7 @@ class CampTableSeeder extends Seeder
             ],
             [
                 'title' => 'Baru Belajar',
-                'slug' => 'gila-belajar',
+                'slug' => 'baru-belajar',
                 'price' => 180,
                 // 'created_at' => date('Y-m-d H:i:s', time()),
                 // 'updated_at' => date('Y-m-d H:i:s', time()),

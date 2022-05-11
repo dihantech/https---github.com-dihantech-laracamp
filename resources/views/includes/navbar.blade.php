@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('welcome') }}">
             <img src="{{ url('frontend/assets/images/logo.png') }}" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,11 +23,11 @@
             </ul>
 
             @auth
-            <div class="d-flex user-logged nav-item dropdown no-arrow">
-                <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hallo, {{ Auth::user()->name }}
-                    <img src="{{ Auth::user()->avatar }}" class=" rounded-circle user-photo" alt="">
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="righ:0; left:auto;">
+            <div class="d-flex user-logged nav-item dropdown">
+                <a href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span> Hallo, {{ Auth::user()->name }}</span>
+                    <img src="{{ Auth::user()->avatar }}" class="rounded-circle user-photo" alt="">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li>
                             <a href="#" class="dropdown-item">My Dashboard</a>
                         </li>
